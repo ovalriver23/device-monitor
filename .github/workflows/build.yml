@@ -22,17 +22,17 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install pyqt5 pyinstaller
+          pip install -r requirements.txt
 
       - name: Build app
         run: |
-          pyinstaller --onefile main.py
+          pyinstaller --name=DeviceMonitor --onefile --windowed --add-data "MyApp/ui:ui" --add-data "MyApp/core:core" MyApp/main.py
 
       - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
           name: macos-build
-          path: dist/main
+          path: dist/DeviceMonitor
 
   build-windows:
     runs-on: windows-latest
@@ -47,14 +47,14 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install pyqt5 pyinstaller
+          pip install -r requirements.txt
 
       - name: Build app
         run: |
-          pyinstaller --onefile main.py
+          pyinstaller --name=DeviceMonitor --onefile --windowed --add-data "MyApp/ui;ui" --add-data "MyApp/core;core" MyApp/main.py
 
       - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
           name: windows-build
-          path: dist/main.exe
+          path: dist/DeviceMonitor.exe
