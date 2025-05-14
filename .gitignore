@@ -1,0 +1,50 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Distribution / packaging
+dist/
+build/
+*.egg-info/
+*.egg
+
+# PyInstaller
+*.manifest
+*.spec
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Virtual environment
+venv/
+env/
+ENV/
+
+# IDE project files
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+
+# Compiled UI files
+*.ui.py
+
+# Generated files
+*.pyd
+*.so
+*.dylib
+
+# Logs
+*.log
+
+# Application-specific
+installer/
+app_icon.ico
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._* 
