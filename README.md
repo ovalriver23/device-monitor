@@ -44,7 +44,7 @@ A cross-platform desktop application that allows you to monitor USB devices and 
 
 1. Clone the repository:
    ```
-   git clone https://github.com/YOUR_USERNAME/device-monitor.git
+   git clone https://github.com/ovalriver23/device-monitor.git
    cd device-monitor
    ```
 
